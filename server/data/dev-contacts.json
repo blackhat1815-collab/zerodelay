@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "6c2f5285-18e1-4875-b074-39a0c311dca2",
+    "user": "fd1f2521-69be-4f3f-8d91-91fd5efb8553",
+    "name": "alpha",
+    "phone": "8088077803",
+    "email": "blackhat1815@gmail.com",
+    "relationship": "Family",
+    "isPrimary": false,
+    "notifyBySMS": true,
+    "notifyByEmail": true,
+    "createdAt": "2026-05-02T17:55:39.492Z"
+  },
+  {
+    "_id": "0a50745e-7dd3-43a8-b36c-a0894e43c5fa",
+    "user": "3b58f99c-ec57-472c-a758-f54c3826efc2",
+    "name": "Emergency Friend",
+    "phone": "+919876543210",
+    "email": "friend@example.com",
+    "relationship": "Friend",
+    "isPrimary": true,
+    "notifyBySMS": true,
+    "notifyByEmail": true,
+    "createdAt": "2026-05-02T18:03:43.623Z"
+  },
+  {
+    "_id": "9fd54367-79e6-4af1-96df-7590d9741202",
+    "user": "837faed6-bd53-40c5-b6fa-c298665fef08",
+    "name": "Real Contact",
+    "phone": "8088077803",
+    "email": "blackhat1815@gmail.com",
+    "relationship": "Family",
+    "isPrimary": false,
+    "notifyBySMS": true,
+    "notifyByEmail": true,
+    "createdAt": "2026-05-02T18:10:20.350Z"
+  },
+  {
+    "_id": "f3ae11e4-147f-4fcb-a083-afe1e283cd6c",
+    "user": "23879025-3e68-482a-81e1-07bf3a02e17d",
+    "name": "Manual Contact",
+    "phone": "+918088077803",
+    "email": "blackhat1815@gmail.com",
+    "relationship": "Family",
+    "isPrimary": false,
+    "notifyBySMS": true,
+    "notifyByEmail": true,
+    "createdAt": "2026-05-02T18:23:27.073Z"
+  },
+  {
+    "_id": "85b03c25-00d5-4fb7-a986-9a463f3b3f13",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "name": "maya2",
+    "phone": "918088077803",
+    "email": "blackhat1815@gmail.com",
+    "relationship": "Family",
+    "isPrimary": false,
+    "notifyBySMS": true,
+    "notifyByEmail": true,
+    "createdAt": "2026-05-02T18:59:40.314Z"
+  }
+]

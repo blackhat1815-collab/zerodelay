@@ -1,0 +1,1938 @@
+[
+  {
+    "_id": "ac458c57-e27e-466b-871e-8b2d5e15efc6",
+    "user": "fd1f2521-69be-4f3f-8d91-91fd5efb8553",
+    "type": "Medical",
+    "status": "Cancelled",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28577694916642,
+        12.958445183450744
+      ]
+    },
+    "contactsNotified": [],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.3,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.7,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1735.9,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.3,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T17:56:46.116Z"
+      },
+      {
+        "event": "Status changed to Cancelled",
+        "timestamp": "2026-05-02T17:58:50.084Z"
+      }
+    ],
+    "createdAt": "2026-05-02T17:56:46.116Z"
+  },
+  {
+    "_id": "826e28f6-5ea3-4738-a021-51794148883b",
+    "user": "fd1f2521-69be-4f3f-8d91-91fd5efb8553",
+    "type": "Medical",
+    "status": "Cancelled",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28577694916642,
+        12.958445183450744
+      ]
+    },
+    "contactsNotified": [],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.3,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.7,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1735.9,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.3,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:00:58.888Z"
+      },
+      {
+        "event": "Status changed to Cancelled",
+        "timestamp": "2026-05-02T18:01:42.753Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:00:58.888Z"
+  },
+  {
+    "_id": "81d7972d-e3e7-427e-a22a-60fea9c49b9f",
+    "user": "3b58f99c-ec57-472c-a758-f54c3826efc2",
+    "type": "Medical",
+    "status": "Active",
+    "description": "Test notification",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        77.2,
+        28.6
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "0a50745e-7dd3-43a8-b36c-a0894e43c5fa",
+        "notifiedAt": "2026-05-02T18:03:43.634Z",
+        "method": "SMS",
+        "status": "Sent"
+      },
+      {
+        "contact": "0a50745e-7dd3-43a8-b36c-a0894e43c5fa",
+        "notifiedAt": "2026-05-02T18:03:43.636Z",
+        "method": "Email",
+        "status": "Sent"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 3.6,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 3.7,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 8.2,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 10.3,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 1739.8,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:03:43.639Z"
+      },
+      {
+        "event": "2 contacts notified",
+        "timestamp": "2026-05-02T18:03:43.639Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:03:43.639Z"
+  },
+  {
+    "_id": "6d716a9f-682b-4bbd-8cb0-f4524ff817c3",
+    "user": "fd1f2521-69be-4f3f-8d91-91fd5efb8553",
+    "type": "Medical",
+    "status": "Cancelled",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28562,
+        12.95819
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "6c2f5285-18e1-4875-b074-39a0c311dca2",
+        "notifiedAt": "2026-05-02T18:04:51.364Z",
+        "method": "SMS",
+        "status": "Sent"
+      },
+      {
+        "contact": "6c2f5285-18e1-4875-b074-39a0c311dca2",
+        "notifiedAt": "2026-05-02T18:04:51.365Z",
+        "method": "Email",
+        "status": "Sent"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.2,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.8,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1736,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.4,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:04:51.368Z"
+      },
+      {
+        "event": "2 contacts notified",
+        "timestamp": "2026-05-02T18:04:51.368Z"
+      },
+      {
+        "event": "Status changed to Cancelled",
+        "timestamp": "2026-05-02T18:05:35.848Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:04:51.368Z"
+  },
+  {
+    "_id": "1b014af9-922d-418c-9a26-e27897055567",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Cancelled",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28562,
+        12.95819
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:07:40.005Z",
+        "method": "SMS",
+        "status": "Sent"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:07:40.006Z",
+        "method": "Email",
+        "status": "Sent"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.2,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.8,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1736,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.4,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:07:40.008Z"
+      },
+      {
+        "event": "2 contacts notified",
+        "timestamp": "2026-05-02T18:07:40.008Z"
+      },
+      {
+        "event": "Status changed to Cancelled",
+        "timestamp": "2026-05-02T18:08:34.593Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:07:40.008Z"
+  },
+  {
+    "_id": "49abc9d8-d3bd-4149-be42-c18e7d0377cd",
+    "user": "837faed6-bd53-40c5-b6fa-c298665fef08",
+    "type": "Medical",
+    "status": "Active",
+    "description": "Credential test",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        77.2,
+        28.6
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "9fd54367-79e6-4af1-96df-7590d9741202",
+        "notifiedAt": "2026-05-02T18:10:20.362Z",
+        "method": "SMS",
+        "status": "Mocked"
+      },
+      {
+        "contact": "9fd54367-79e6-4af1-96df-7590d9741202",
+        "notifiedAt": "2026-05-02T18:10:20.363Z",
+        "method": "Email",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 3.6,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 3.7,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 8.2,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 10.3,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 1739.8,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:10:20.367Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:10:20.367Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:10:20.367Z"
+  },
+  {
+    "_id": "288dace7-d5b8-4636-9064-5626affa046b",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Cancelled",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28575918774887,
+        12.958463279923823
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:11:24.232Z",
+        "method": "SMS",
+        "status": "Mocked"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:11:24.235Z",
+        "method": "Email",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.3,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.7,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1735.9,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.3,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:11:24.238Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:11:24.238Z"
+      },
+      {
+        "event": "Status changed to Cancelled",
+        "timestamp": "2026-05-02T18:11:45.329Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:11:24.238Z"
+  },
+  {
+    "_id": "0d0e9b68-4c98-4daa-b5ab-0ea5a295b486",
+    "user": "23879025-3e68-482a-81e1-07bf3a02e17d",
+    "type": "Medical",
+    "status": "Active",
+    "description": "Manual link test",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        77.2,
+        28.6
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "f3ae11e4-147f-4fcb-a083-afe1e283cd6c",
+        "notifiedAt": "2026-05-02T18:23:27.120Z",
+        "method": "SMS",
+        "contactName": "Manual Contact",
+        "phone": "+918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nManual Send User needs help!\nLocation: https://www.google.com/maps?q=28.6,77.2\nType: Medical\nDetails: Manual link test",
+        "smsLink": "sms:+918088077803?&body=EMERGENCY%20ALERT!%0AManual%20Send%20User%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D28.6%2C77.2%0AType%3A%20Medical%0ADetails%3A%20Manual%20link%20test",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0AManual%20Send%20User%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D28.6%2C77.2%0AType%3A%20Medical%0ADetails%3A%20Manual%20link%20test",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0AManual%20Send%20User%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D28.6%2C77.2%0AType%3A%20Medical%0ADetails%3A%20Manual%20link%20test",
+        "status": "Mocked"
+      },
+      {
+        "contact": "f3ae11e4-147f-4fcb-a083-afe1e283cd6c",
+        "notifiedAt": "2026-05-02T18:23:27.122Z",
+        "method": "Email",
+        "contactName": "Manual Contact",
+        "phone": "+918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nManual Send User needs help!\nLocation: https://www.google.com/maps?q=28.6,77.2\nType: Medical\nDetails: Manual link test",
+        "smsLink": "sms:+918088077803?&body=EMERGENCY%20ALERT!%0AManual%20Send%20User%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D28.6%2C77.2%0AType%3A%20Medical%0ADetails%3A%20Manual%20link%20test",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0AManual%20Send%20User%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D28.6%2C77.2%0AType%3A%20Medical%0ADetails%3A%20Manual%20link%20test",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0AManual%20Send%20User%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D28.6%2C77.2%0AType%3A%20Medical%0ADetails%3A%20Manual%20link%20test",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 3.6,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 3.7,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 8.2,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 10.3,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 1739.8,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:23:27.133Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:23:27.133Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:23:27.133Z"
+  },
+  {
+    "_id": "00e96a80-4520-4cbf-8ae3-c623af9796ce",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Active",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28559876323557,
+        12.95814244890003
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:24:17.073Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:24:17.075Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.2,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.8,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1736,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.4,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:24:17.077Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:24:17.077Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:24:17.077Z"
+  },
+  {
+    "_id": "98446970-9629-4a60-8cc7-30f73e050805",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Active",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28559876323557,
+        12.95814244890003
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:47:15.601Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:47:15.602Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.2,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.8,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1736,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.4,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:47:15.604Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:47:15.604Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:47:15.604Z"
+  },
+  {
+    "_id": "a7850c9c-d937-4325-9cad-2d5c8193f098",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Resolved",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28559876323557,
+        12.95814244890003
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:49:19.176Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:49:19.178Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.2,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.8,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1736,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.4,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:49:19.180Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:49:19.180Z"
+      },
+      {
+        "event": "Status changed to Resolved",
+        "timestamp": "2026-05-02T18:51:56.659Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:49:19.180Z",
+    "resolvedAt": "2026-05-02T18:51:56.659Z"
+  },
+  {
+    "_id": "aab26b40-7945-4783-b85c-360ff5d62121",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Resolved",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28559876323557,
+        12.95814244890003
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:51:59.141Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:51:59.143Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.2,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.8,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1736,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.4,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:51:59.145Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:51:59.145Z"
+      },
+      {
+        "event": "Status changed to Resolved",
+        "timestamp": "2026-05-02T18:52:11.846Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:51:59.145Z",
+    "resolvedAt": "2026-05-02T18:52:11.846Z"
+  },
+  {
+    "_id": "9a6504cf-5cdd-4341-830b-09e6b97efd15",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Resolved",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28559876323557,
+        12.95814244890003
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:52:13.858Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:52:13.860Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95814244890003,78.28559876323557\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95814244890003%2C78.28559876323557%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.2,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.8,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1736,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.4,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:52:13.865Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:52:13.865Z"
+      },
+      {
+        "event": "Status changed to Resolved",
+        "timestamp": "2026-05-02T18:54:39.532Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:52:13.865Z",
+    "resolvedAt": "2026-05-02T18:54:39.532Z"
+  },
+  {
+    "_id": "39d116a6-afe2-4ded-93db-7ed84d7f70ea",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Resolved",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28562,
+        12.95819
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:54:45.792Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95819,78.28562\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95819%2C78.28562%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95819%2C78.28562%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95819%2C78.28562%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:54:45.793Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95819,78.28562\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95819%2C78.28562%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95819%2C78.28562%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95819%2C78.28562%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.2,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.8,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1736,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.4,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:54:45.797Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:54:45.797Z"
+      },
+      {
+        "event": "Status changed to Resolved",
+        "timestamp": "2026-05-02T18:57:23.832Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:54:45.797Z",
+    "resolvedAt": "2026-05-02T18:57:23.832Z"
+  },
+  {
+    "_id": "5fdf4e42-54c9-496d-80da-dccb019dbb4d",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Resolved",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.2858686601573,
+        12.95857949467192
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:57:30.656Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95857949467192,78.2858686601573\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:57:30.657Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95857949467192,78.2858686601573\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.3,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.7,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1735.9,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.3,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:57:30.659Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:57:30.659Z"
+      },
+      {
+        "event": "Status changed to Resolved",
+        "timestamp": "2026-05-02T18:59:19.554Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:57:30.659Z",
+    "resolvedAt": "2026-05-02T18:59:19.554Z"
+  },
+  {
+    "_id": "bec9ee6b-e5de-48f4-8465-28fa5798f46e",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Resolved",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.2858686601573,
+        12.95857949467192
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:59:21.820Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95857949467192,78.2858686601573\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "5c62a937-6c1c-4054-bd36-6317681c9fa7",
+        "notifiedAt": "2026-05-02T18:59:21.821Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95857949467192,78.2858686601573\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.3,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.7,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1735.9,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.3,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:59:21.824Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:59:21.824Z"
+      },
+      {
+        "event": "Status changed to Resolved",
+        "timestamp": "2026-05-02T18:59:45.963Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:59:21.824Z",
+    "resolvedAt": "2026-05-02T18:59:45.963Z"
+  },
+  {
+    "_id": "708bb680-b445-4cdf-98a1-4d495565b9f3",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Cancelled",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.2858686601573,
+        12.95857949467192
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "85b03c25-00d5-4fb7-a986-9a463f3b3f13",
+        "notifiedAt": "2026-05-02T18:59:51.893Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95857949467192,78.2858686601573\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "85b03c25-00d5-4fb7-a986-9a463f3b3f13",
+        "notifiedAt": "2026-05-02T18:59:51.895Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.95857949467192,78.2858686601573\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.95857949467192%2C78.2858686601573%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.3,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.7,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1735.9,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.3,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T18:59:51.897Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T18:59:51.897Z"
+      },
+      {
+        "event": "Status changed to Cancelled",
+        "timestamp": "2026-05-02T19:00:00.168Z"
+      }
+    ],
+    "createdAt": "2026-05-02T18:59:51.897Z"
+  },
+  {
+    "_id": "d1210268-4210-4460-821c-416bfe499588",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Active",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.2859266644701,
+        12.958682639826337
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "85b03c25-00d5-4fb7-a986-9a463f3b3f13",
+        "notifiedAt": "2026-05-02T19:02:29.796Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.958682639826337,78.2859266644701\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958682639826337%2C78.2859266644701%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958682639826337%2C78.2859266644701%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958682639826337%2C78.2859266644701%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "85b03c25-00d5-4fb7-a986-9a463f3b3f13",
+        "notifiedAt": "2026-05-02T19:02:29.797Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.958682639826337,78.2859266644701\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958682639826337%2C78.2859266644701%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958682639826337%2C78.2859266644701%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958682639826337%2C78.2859266644701%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.3,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.7,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1735.9,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.3,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T19:02:29.801Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T19:02:29.801Z"
+      }
+    ],
+    "createdAt": "2026-05-02T19:02:29.801Z"
+  },
+  {
+    "_id": "88017172-9058-4d7a-a568-b5b4334ceeea",
+    "user": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "type": "Medical",
+    "status": "Active",
+    "description": "",
+    "voiceTranscript": "",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        78.28570516850009,
+        12.958272817603776
+      ]
+    },
+    "contactsNotified": [
+      {
+        "contact": "85b03c25-00d5-4fb7-a986-9a463f3b3f13",
+        "notifiedAt": "2026-05-02T19:08:39.710Z",
+        "method": "SMS",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.958272817603776,78.28570516850009\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958272817603776%2C78.28570516850009%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958272817603776%2C78.28570516850009%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958272817603776%2C78.28570516850009%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      },
+      {
+        "contact": "85b03c25-00d5-4fb7-a986-9a463f3b3f13",
+        "notifiedAt": "2026-05-02T19:08:39.711Z",
+        "method": "Email",
+        "contactName": "maya2",
+        "phone": "918088077803",
+        "email": "blackhat1815@gmail.com",
+        "message": "EMERGENCY ALERT!\nmaya needs help!\nLocation: https://www.google.com/maps?q=12.958272817603776,78.28570516850009\nType: Medical\n",
+        "smsLink": "sms:918088077803?&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958272817603776%2C78.28570516850009%0AType%3A%20Medical%0A",
+        "whatsappLink": "https://wa.me/918088077803?text=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958272817603776%2C78.28570516850009%0AType%3A%20Medical%0A",
+        "emailLink": "mailto:blackhat1815@gmail.com?subject=Emergency%20Alert&body=EMERGENCY%20ALERT!%0Amaya%20needs%20help!%0ALocation%3A%20https%3A%2F%2Fwww.google.com%2Fmaps%3Fq%3D12.958272817603776%2C78.28570516850009%0AType%3A%20Medical%0A",
+        "status": "Mocked"
+      }
+    ],
+    "nearbyHospitals": [
+      {
+        "name": "Manipal Hospital",
+        "address": "HAL Airport Road, Bangalore",
+        "phone": "080-25024455",
+        "distance": 69.2,
+        "coordinates": [
+          77.6467,
+          12.9592
+        ]
+      },
+      {
+        "name": "Max Super Speciality Hospital",
+        "address": "Saket, New Delhi",
+        "phone": "011-26515051",
+        "distance": 1734.7,
+        "coordinates": [
+          77.2177,
+          28.5275
+        ]
+      },
+      {
+        "name": "Apollo Hospital",
+        "address": "Mathura Road, New Delhi",
+        "phone": "011-71791099",
+        "distance": 1736,
+        "coordinates": [
+          77.2821,
+          28.5421
+        ]
+      },
+      {
+        "name": "AIIMS Delhi",
+        "address": "Sri Aurobindo Marg, New Delhi",
+        "phone": "011-26588700",
+        "distance": 1739.2,
+        "coordinates": [
+          77.2088,
+          28.5672
+        ]
+      },
+      {
+        "name": "Safdarjung Hospital",
+        "address": "Ring Road, New Delhi",
+        "phone": "011-26707444",
+        "distance": 1739.4,
+        "coordinates": [
+          77.2066,
+          28.5685
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "event": "Emergency triggered",
+        "timestamp": "2026-05-02T19:08:39.713Z"
+      },
+      {
+        "event": "0 contacts notified, 2 mocked",
+        "timestamp": "2026-05-02T19:08:39.713Z"
+      }
+    ],
+    "createdAt": "2026-05-02T19:08:39.713Z"
+  }
+]

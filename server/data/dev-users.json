@@ -1,0 +1,135 @@
+[
+  {
+    "id": "b6e0c88a-4358-43c8-81ec-c2d07646a0fb",
+    "name": "Dev User",
+    "email": "dev231931@example.com",
+    "phone": "9876543210",
+    "password": "$2a$10$li34iFoyw3Wx5U31X.naWOAM6wZvKZval1DkwecKYoYAAYV4spSdK",
+    "bloodGroup": "Unknown",
+    "medicalConditions": [],
+    "allergies": [],
+    "emergencyContacts": [],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "createdAt": "2026-05-02T17:49:32.084Z"
+  },
+  {
+    "id": "fd1f2521-69be-4f3f-8d91-91fd5efb8553",
+    "name": "alpha",
+    "email": "alpha@gmail.com",
+    "phone": "8088077803",
+    "password": "$2a$10$BjOjIA8oR52do/EP8tEMmOfMm4pb9U7f8uXqm/I6Vp9ctHazE7sk.",
+    "bloodGroup": "B-",
+    "medicalConditions": [],
+    "allergies": [],
+    "emergencyContacts": [],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "createdAt": "2026-05-02T17:50:07.486Z"
+  },
+  {
+    "id": "0c5ad9c3-05a6-4eec-8d6d-a04960e3fde8",
+    "name": "Full Flow",
+    "email": "full232504@example.com",
+    "phone": "9876543210",
+    "password": "$2a$10$l37IAHDFlPypWsztGDB4/.fQa2FMvhA6cjzpg6SOr9RZYk5Lsq5hW",
+    "bloodGroup": "Unknown",
+    "medicalConditions": [],
+    "allergies": [],
+    "emergencyContacts": [],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "createdAt": "2026-05-02T17:55:04.963Z"
+  },
+  {
+    "id": "3b58f99c-ec57-472c-a758-f54c3826efc2",
+    "name": "Notify User",
+    "email": "notify233343@example.com",
+    "phone": "9876543210",
+    "password": "$2a$10$rYfJKmWX0288YU56HhXNKuVQKF6hnAim9WvJXncPNaY27rWSqJ6cK",
+    "bloodGroup": "Unknown",
+    "medicalConditions": [],
+    "allergies": [],
+    "emergencyContacts": [],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "createdAt": "2026-05-02T18:03:43.557Z"
+  },
+  {
+    "id": "7c142d8c-59a4-4335-bc70-ef1e375edd0c",
+    "name": "maya",
+    "email": "blackhat1815@gmail.com",
+    "phone": "8088077803",
+    "password": "$2a$10$qIJwf9hbg0f9O1ifhnuJ2Oq3YuCeNsflMWmXBBo2IoyHc/GxHYWtu",
+    "bloodGroup": "B+",
+    "medicalConditions": [],
+    "allergies": [],
+    "emergencyContacts": [],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "createdAt": "2026-05-02T18:07:15.678Z"
+  },
+  {
+    "id": "837faed6-bd53-40c5-b6fa-c298665fef08",
+    "name": "Mock User",
+    "email": "mock234020@example.com",
+    "phone": "9876543210",
+    "password": "$2a$10$J2mC5rUATjk4/N6aj.UCde2sGJ807Ol/hXhWrmAOaeEEFOzDSH5LW",
+    "bloodGroup": "Unknown",
+    "medicalConditions": [],
+    "allergies": [],
+    "emergencyContacts": [],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "createdAt": "2026-05-02T18:10:20.279Z"
+  },
+  {
+    "id": "23879025-3e68-482a-81e1-07bf3a02e17d",
+    "name": "Manual Send User",
+    "email": "manual235326@example.com",
+    "phone": "9876543210",
+    "password": "$2a$10$fao/B2.eHw1o.OkAzniln.eXGHLA0n9LfoCyfj/jqz9LQ59bYbyr.",
+    "bloodGroup": "Unknown",
+    "medicalConditions": [],
+    "allergies": [],
+    "emergencyContacts": [],
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    },
+    "createdAt": "2026-05-02T18:23:27.006Z"
+  }
+]
