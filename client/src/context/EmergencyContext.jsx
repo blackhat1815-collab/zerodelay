@@ -4,6 +4,9 @@ import { useAuth } from './AuthContext';
 import api from '../services/api';
 
 const EmergencyContext = createContext(null);
+const configuredApiUrl = import.meta.env.VITE_API_URL?.trim().replace(/\/$/, '');
+const isLocalhost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+const socketUrl = configuredApiUrl || (isLocalhost ? 'http://localhost:5000' : 'https://zerodelay-api.onrender.com');
 
 export function EmergencyProvider({ children }) {
   const { user } = useAuth();
@@ -15,7 +18,7 @@ export function EmergencyProvider({ children }) {
 
   useEffect(() => {
     if (user) {
-      const newSocket = io(import.meta.env.VITE_API_URL || 'http://localhost:5000');
+      const newSocket = io(socketUrl);
       
       newSocket.on('connect', () => {
         console.log('Socket connected');

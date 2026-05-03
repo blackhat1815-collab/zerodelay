@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+const configuredApiUrl = import.meta.env.VITE_API_URL?.trim().replace(/\/$/, '');
+const isLocalhost = ['localhost', '127.0.0.1'].includes(window.location.hostname);
+const apiOrigin = configuredApiUrl || (isLocalhost ? '' : 'https://zerodelay-api.onrender.com');
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : '/api',
+  baseURL: `${apiOrigin}/api`,
   headers: {
     'Content-Type': 'application/json'
   }
