@@ -16,6 +16,7 @@ import { useVoiceRecognition } from '../services/hooks/useVoiceRecognition';
 import Map from '../services/components/Map';
 import FirstAidCard from '../services/components/FirstAidCard';
 import HospitalCard from '../services/components/HospitalCard';
+import api from '../services/api';
 import toast from 'react-hot-toast';
 
 const emergencyTypes = [
@@ -31,6 +32,7 @@ export default function Emergency() {
   const { 
     activeEmergency, 
     location, 
+    locationLoading,
     locationError,
     setLocation,
     requestLocation,
@@ -50,6 +52,14 @@ export default function Emergency() {
     latitude: '',
     longitude: ''
   });
+  const [chatMessages, setChatMessages] = useState([
+    {
+      role: 'assistant',
+      text: 'Tell me what happened and I will give quick first aid guidance.'
+    }
+  ]);
+  const [chatInput, setChatInput] = useState('');
+  const [chatLoading, setChatLoading] = useState(false);
   const [completedSteps, setCompletedSteps] = useState(new Set());
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -136,6 +146,85 @@ export default function Emergency() {
     setLocation({ latitude, longitude });
     toast.success('Location set');
   };
+
+  const handleChatSubmit = async (e) => {
+    e.preventDefault();
+    const message = chatInput.trim();
+
+    if (!message || chatLoading) return;
+
+    const nextMessages = [...chatMessages, { role: 'user', text: message }];
+    setChatMessages(nextMessages);
+    setChatInput('');
+    setChatLoading(true);
+
+    try {
+      const response = await api.post('/first-aid/chat', {
+        message,
+        context: {
+          emergencyType: selectedType,
+          activeEmergency: Boolean(activeEmergency),
+          description
+        }
+      });
+
+      setChatMessages([
+        ...nextMessages,
+        { role: 'assistant', text: response.data.data.response }
+      ]);
+    } catch (error) {
+      setChatMessages([
+        ...nextMessages,
+        {
+          role: 'assistant',
+          text: error.response?.data?.message || 'I could not reach first aid chat. Call 112 if this is urgent.'
+        }
+      ]);
+    } finally {
+      setChatLoading(false);
+    }
+  };
+
+  const renderFirstAidChat = () => (
+    <div className="card p-6">
+      <h2 className="text-xl font-bold text-gray-900 mb-4">First Aid Chat</h2>
+      <div className="max-h-72 space-y-3 overflow-y-auto rounded-lg border border-gray-200 bg-gray-50 p-3">
+        {chatMessages.map((message, index) => (
+          <div
+            key={`${message.role}-${index}`}
+            className={`rounded-lg px-3 py-2 text-sm ${
+              message.role === 'user'
+                ? 'ml-auto bg-emergency-600 text-white'
+                : 'mr-auto bg-white text-gray-800 ring-1 ring-gray-200'
+            } max-w-[85%] whitespace-pre-line`}
+          >
+            {message.text}
+          </div>
+        ))}
+        {chatLoading && (
+          <div className="mr-auto max-w-[85%] rounded-lg bg-white px-3 py-2 text-sm text-gray-500 ring-1 ring-gray-200">
+            Thinking...
+          </div>
+        )}
+      </div>
+      <form onSubmit={handleChatSubmit} className="mt-3 flex gap-2">
+        <input
+          type="text"
+          value={chatInput}
+          onChange={(e) => setChatInput(e.target.value)}
+          className="input"
+          placeholder="Ask about CPR, bleeding, burns..."
+        />
+        <button
+          type="submit"
+          disabled={chatLoading || !chatInput.trim()}
+          className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800 disabled:opacity-50"
+        >
+          Send
+        </button>
+      </form>
+    </div>
+  );
 
   const notifications = activeEmergency?.contactsNotified || [];
   const sentCount = notifications.filter((item) => item.status === 'Sent').length;
@@ -227,6 +316,8 @@ export default function Emergency() {
               )}
             </motion.div>
 
+            {renderFirstAidChat()}
+
             {/* Map & Hospitals */}
             <motion.div 
               className="space-y-6"
@@ -312,6 +403,7 @@ export default function Emergency() {
                 {location && (
                   <p className="text-sm text-gray-500 mt-2">
                     Coordinates: {location.latitude.toFixed(6)}, {location.longitude.toFixed(6)}
+                    {location.accuracy ? ` - Accuracy ${Math.round(location.accuracy)}m` : ''}
                   </p>
                 )}
               </div>
@@ -408,7 +500,7 @@ export default function Emergency() {
                 <strong>Location:</strong>{' '}
                 {location 
                   ? `${location.latitude.toFixed(4)}, ${location.longitude.toFixed(4)}`
-                  : 'Getting location...'
+                  : locationLoading ? 'Getting location...' : 'Location unavailable'
                 }
               </p>
             </div>
@@ -500,6 +592,15 @@ export default function Emergency() {
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          className="mt-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
+        >
+          {renderFirstAidChat()}
+        </motion.div>
 
         {/* Map Preview */}
         <motion.div 

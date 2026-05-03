@@ -13,29 +13,62 @@ const conditions = [
 ];
 
 export default function FirstAid() {
-  const { condition } = useParams();
+  const { id, condition } = useParams();
+  const selectedCondition = condition || id;
   const [guide, setGuide] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
-    if (condition) {
-      fetchGuide(condition);
+    if (selectedCondition) {
+      fetchGuide(selectedCondition);
     }
-  }, [condition]);
+  }, [selectedCondition]);
 
   const fetchGuide = async (conditionId) => {
     setLoading(true);
+    setError('');
     try {
       const response = await api.get(`/first-aid/${conditionId}`);
       setGuide(response.data.data);
     } catch (error) {
       console.error('Failed to fetch guide:', error);
+      setError(error.response?.data?.message || 'Unable to load this first aid guide');
     } finally {
       setLoading(false);
     }
   };
 
-  if (condition && guide) {
+  if (selectedCondition && loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <div className="card p-8 text-center">
+            <div className="mx-auto h-10 w-10 animate-spin rounded-full border-b-2 border-t-2 border-emergency-600"></div>
+            <p className="mt-4 text-gray-600">Loading first aid guide...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (selectedCondition && error) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+          <Link to="/first-aid" className="mb-6 inline-flex items-center gap-1 text-emergency-600 hover:text-emergency-700">
+            Back to all guides
+          </Link>
+          <div className="card p-8">
+            <h1 className="text-2xl font-bold text-gray-900">Guide unavailable</h1>
+            <p className="mt-2 text-gray-600">{error}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (selectedCondition && guide) {
     return (
       <div className="min-h-screen bg-gray-50 py-8">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

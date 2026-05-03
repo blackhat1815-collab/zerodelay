@@ -23,6 +23,7 @@ export function EmergencyProvider({ children }) {
   const [locationError, setLocationError] = useState('');
   const [nearbyHospitals, setNearbyHospitals] = useState([]);
   const [firstAidSteps, setFirstAidSteps] = useState(null);
+  const [locationLoading, setLocationLoading] = useState(false);
 
   const setLocation = (nextLocation) => {
     setLocationState(nextLocation);
@@ -60,17 +61,21 @@ export function EmergencyProvider({ children }) {
 
   const requestLocation = () => {
     if (navigator.geolocation) {
+      setLocationLoading(true);
       setLocationError('');
       navigator.geolocation.getCurrentPosition(
         (position) => {
           setLocation({
             latitude: position.coords.latitude,
-            longitude: position.coords.longitude
+            longitude: position.coords.longitude,
+            accuracy: position.coords.accuracy
           });
+          setLocationLoading(false);
         },
         (error) => {
           console.error('Error getting location:', error);
           setLocationError(error.message || 'Unable to get your location');
+          setLocationLoading(false);
         },
         { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 }
       );
@@ -82,6 +87,25 @@ export function EmergencyProvider({ children }) {
   // Get current location
   useEffect(() => {
     requestLocation();
+    if (!navigator.geolocation) return undefined;
+
+    const watchId = navigator.geolocation.watchPosition(
+      (position) => {
+        setLocation({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          accuracy: position.coords.accuracy
+        });
+        setLocationError('');
+      },
+      (error) => {
+        console.error('Error watching location:', error);
+        setLocationError(error.message || 'Unable to keep location updated');
+      },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 30000 }
+    );
+
+    return () => navigator.geolocation.clearWatch(watchId);
   }, []);
 
   const triggerEmergency = async (type = 'Medical', description = '') => {
@@ -139,6 +163,7 @@ export function EmergencyProvider({ children }) {
       socket,
       activeEmergency,
       location,
+      locationLoading,
       locationError,
       setLocation,
       requestLocation,
