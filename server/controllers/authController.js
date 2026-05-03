@@ -16,13 +16,14 @@ const isDatabaseConnected = () => mongoose.connection.readyState === 1;
 export const register = async (req, res, next) => {
   try {
     const { name, email, password, phone, bloodGroup, medicalConditions, allergies } = req.body;
+    const normalizedPhone = phone?.replace(/[\s().-]/g, '');
 
     // Validation
     if (!validator.isEmail(email)) {
       return res.status(400).json({ success: false, message: 'Invalid email' });
     }
 
-    if (!validator.isMobilePhone(phone, 'any')) {
+    if (!validator.isMobilePhone(normalizedPhone || '', 'any')) {
       return res.status(400).json({ success: false, message: 'Invalid phone number' });
     }
 
@@ -31,7 +32,7 @@ export const register = async (req, res, next) => {
         name,
         email,
         password,
-        phone,
+        phone: normalizedPhone,
         bloodGroup,
         medicalConditions,
         allergies
@@ -49,7 +50,7 @@ export const register = async (req, res, next) => {
       name,
       email,
       password,
-      phone,
+      phone: normalizedPhone,
       bloodGroup,
       medicalConditions,
       allergies
