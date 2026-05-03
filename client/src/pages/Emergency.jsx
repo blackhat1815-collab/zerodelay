@@ -31,6 +31,9 @@ export default function Emergency() {
   const { 
     activeEmergency, 
     location, 
+    locationError,
+    setLocation,
+    requestLocation,
     nearbyHospitals, 
     firstAidSteps,
     triggerEmergency, 
@@ -43,6 +46,10 @@ export default function Emergency() {
   const [selectedType, setSelectedType] = useState('Medical');
   const [description, setDescription] = useState('');
   const [isTriggering, setIsTriggering] = useState(false);
+  const [manualLocation, setManualLocation] = useState({
+    latitude: '',
+    longitude: ''
+  });
   const [completedSteps, setCompletedSteps] = useState(new Set());
   const [currentStep, setCurrentStep] = useState(0);
 
@@ -106,6 +113,28 @@ export default function Emergency() {
         '_blank'
       );
     }
+  };
+
+  const handleManualLocationChange = (e) => {
+    setManualLocation({ ...manualLocation, [e.target.name]: e.target.value });
+  };
+
+  const handleUseManualLocation = () => {
+    const latitude = Number(manualLocation.latitude);
+    const longitude = Number(manualLocation.longitude);
+
+    if (!Number.isFinite(latitude) || latitude < -90 || latitude > 90) {
+      toast.error('Enter a valid latitude between -90 and 90');
+      return;
+    }
+
+    if (!Number.isFinite(longitude) || longitude < -180 || longitude > 180) {
+      toast.error('Enter a valid longitude between -180 and 180');
+      return;
+    }
+
+    setLocation({ latitude, longitude });
+    toast.success('Location set');
   };
 
   const notifications = activeEmergency?.contactsNotified || [];
@@ -383,6 +412,48 @@ export default function Emergency() {
                 }
               </p>
             </div>
+
+            {!location && (
+              <div className="rounded-lg border border-yellow-200 bg-yellow-50 p-4">
+                <p className="text-sm text-yellow-800">
+                  {locationError || 'Allow location access in your browser to trigger an emergency.'}
+                </p>
+                <button
+                  type="button"
+                  onClick={requestLocation}
+                  className="mt-3 rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white hover:bg-gray-800"
+                >
+                  Try location again
+                </button>
+                <div className="mt-4 grid grid-cols-2 gap-3">
+                  <input
+                    type="number"
+                    step="any"
+                    name="latitude"
+                    value={manualLocation.latitude}
+                    onChange={handleManualLocationChange}
+                    className="input"
+                    placeholder="Latitude"
+                  />
+                  <input
+                    type="number"
+                    step="any"
+                    name="longitude"
+                    value={manualLocation.longitude}
+                    onChange={handleManualLocationChange}
+                    className="input"
+                    placeholder="Longitude"
+                  />
+                </div>
+                <button
+                  type="button"
+                  onClick={handleUseManualLocation}
+                  className="mt-3 w-full rounded-lg bg-emergency-600 px-3 py-2 text-sm font-medium text-white hover:bg-emergency-700"
+                >
+                  Use manual location
+                </button>
+              </div>
+            )}
           </motion.div>
 
           {/* Right: Emergency Button & Preview */}

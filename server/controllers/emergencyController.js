@@ -38,12 +38,21 @@ function buildManualNotification(contact, message, subject = 'Emergency Alert') 
 export const triggerEmergency = async (req, res, next) => {
   try {
     const { latitude, longitude, type, description, voiceTranscript } = req.body;
+    const lat = Number(latitude);
+    const lng = Number(longitude);
     const io = req.app.get('io');
+
+    if (!Number.isFinite(lat) || lat < -90 || lat > 90 || !Number.isFinite(lng) || lng < -180 || lng > 180) {
+      return res.status(400).json({
+        success: false,
+        message: 'Valid latitude and longitude are required to trigger an emergency'
+      });
+    }
 
     if (!isDatabaseConnected()) {
       const user = await findDevUserById(req.user.id);
       const contacts = await getDevContacts(req.user.id);
-      const googleMapsLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+      const googleMapsLink = `https://www.google.com/maps?q=${lat},${lng}`;
       const message = `EMERGENCY ALERT!\n${user.name} needs help!\nLocation: ${googleMapsLink}\nType: ${type || 'Medical'}\n${description ? `Details: ${description}` : ''}`;
       const notificationResults = [];
 
@@ -78,7 +87,7 @@ export const triggerEmergency = async (req, res, next) => {
             const delivery = await sendEmergencyEmail(contact.email, user.name, {
               type,
               description,
-              location: { latitude, longitude },
+              location: { latitude: lat, longitude: lng },
               googleMapsLink,
               userPhone: user.phone,
               bloodGroup: user.bloodGroup,
@@ -95,8 +104,8 @@ export const triggerEmergency = async (req, res, next) => {
       }
 
       const emergency = await createDevEmergency(req.user.id, {
-        latitude,
-        longitude,
+        latitude: lat,
+        longitude: lng,
         type,
         description,
         voiceTranscript,
@@ -126,19 +135,24 @@ export const triggerEmergency = async (req, res, next) => {
     // Get user with contacts
     const user = await User.findById(req.user.id).populate('emergencyContacts');
 
-    // Find nearby hospitals
-    const hospitals = await Hospital.find({
-      location: {
-        $near: {
-          $geometry: {
-            type: 'Point',
-            coordinates: [longitude, latitude]
-          },
-          $maxDistance: 10000 // 10km radius
-        }
-      },
-      hasEmergencyServices: true
-    }).limit(5);
+    // Find nearby hospitals. Emergency creation should still work if this lookup fails.
+    let hospitals = [];
+    try {
+      hospitals = await Hospital.find({
+        location: {
+          $near: {
+            $geometry: {
+              type: 'Point',
+              coordinates: [lng, lat]
+            },
+            $maxDistance: 10000 // 10km radius
+          }
+        },
+        hasEmergencyServices: true
+      }).limit(5);
+    } catch (error) {
+      console.error('Hospital lookup failed:', error);
+    }
 
     // Create emergency record
     const emergency = await Emergency.create({
@@ -148,13 +162,13 @@ export const triggerEmergency = async (req, res, next) => {
       voiceTranscript,
       location: {
         type: 'Point',
-        coordinates: [longitude, latitude]
+        coordinates: [lng, lat]
       },
       nearbyHospitals: hospitals.map(h => ({
         name: h.name,
         address: `${h.address.street}, ${h.address.city}`,
         phone: h.emergencyPhone || h.phone,
-        distance: calculateDistance(latitude, longitude, h.location.coordinates[1], h.location.coordinates[0]),
+        distance: calculateDistance(lat, lng, h.location.coordinates[1], h.location.coordinates[0]),
         coordinates: h.location.coordinates
       })),
       timeline: [{
@@ -168,7 +182,7 @@ export const triggerEmergency = async (req, res, next) => {
     const notificationResults = [];
 
     // Send notifications
-    const googleMapsLink = `https://www.google.com/maps?q=${latitude},${longitude}`;
+    const googleMapsLink = `https://www.google.com/maps?q=${lat},${lng}`;
     const message = `🚨 EMERGENCY ALERT!\n${user.name} needs help!\nLocation: ${googleMapsLink}\nType: ${type || 'Medical'}\n${description ? `Details: ${description}` : ''}`;
 
     for (const contact of contacts) {
@@ -194,7 +208,7 @@ export const triggerEmergency = async (req, res, next) => {
           const delivery = await sendEmergencyEmail(contact.email, user.name, {
             type,
             description,
-            location: { latitude, longitude },
+            location: { latitude: lat, longitude: lng },
             googleMapsLink,
             userPhone: user.phone,
             bloodGroup: user.bloodGroup,
@@ -236,7 +250,7 @@ export const triggerEmergency = async (req, res, next) => {
       emergencyId: emergency._id,
       status: 'Active',
       hospitals: emergency.nearbyHospitals,
-      contactsNotified: notificationResults.length,
+      contactsNotified: notificationResults,
       firstAidSteps
     });
 

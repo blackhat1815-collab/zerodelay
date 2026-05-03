@@ -12,9 +12,24 @@ export function EmergencyProvider({ children }) {
   const { user } = useAuth();
   const [socket, setSocket] = useState(null);
   const [activeEmergency, setActiveEmergency] = useState(null);
-  const [location, setLocation] = useState(null);
+  const [location, setLocationState] = useState(() => {
+    try {
+      const savedLocation = localStorage.getItem('lastKnownLocation');
+      return savedLocation ? JSON.parse(savedLocation) : null;
+    } catch {
+      return null;
+    }
+  });
+  const [locationError, setLocationError] = useState('');
   const [nearbyHospitals, setNearbyHospitals] = useState([]);
   const [firstAidSteps, setFirstAidSteps] = useState(null);
+
+  const setLocation = (nextLocation) => {
+    setLocationState(nextLocation);
+    if (nextLocation) {
+      localStorage.setItem('lastKnownLocation', JSON.stringify(nextLocation));
+    }
+  };
 
   useEffect(() => {
     if (user) {
@@ -43,9 +58,9 @@ export function EmergencyProvider({ children }) {
     }
   }, [user]);
 
-  // Get current location
-  useEffect(() => {
+  const requestLocation = () => {
     if (navigator.geolocation) {
+      setLocationError('');
       navigator.geolocation.getCurrentPosition(
         (position) => {
           setLocation({
@@ -55,10 +70,18 @@ export function EmergencyProvider({ children }) {
         },
         (error) => {
           console.error('Error getting location:', error);
+          setLocationError(error.message || 'Unable to get your location');
         },
-        { enableHighAccuracy: true }
+        { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 }
       );
+    } else {
+      setLocationError('Geolocation is not supported by this browser');
     }
+  };
+
+  // Get current location
+  useEffect(() => {
+    requestLocation();
   }, []);
 
   const triggerEmergency = async (type = 'Medical', description = '') => {
@@ -116,7 +139,9 @@ export function EmergencyProvider({ children }) {
       socket,
       activeEmergency,
       location,
+      locationError,
       setLocation,
+      requestLocation,
       nearbyHospitals,
       firstAidSteps,
       triggerEmergency,
