@@ -52,6 +52,119 @@
   }
 }
 
+.app-3d-shell {
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+  perspective: 1200px;
+}
+
+.app-3d-shell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 18% 16%, rgba(225, 29, 72, 0.12), transparent 30%),
+    radial-gradient(circle at 82% 18%, rgba(14, 165, 233, 0.11), transparent 28%),
+    linear-gradient(135deg, #f8fafc 0%, #f9fafb 46%, #fff1f2 100%);
+}
+
+.app-3d-scene {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+.app-3d-shape {
+  position: absolute;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(254, 205, 211, 0.28));
+  box-shadow:
+    0 24px 70px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transform-style: preserve-3d;
+  animation: layout-float-3d 12s ease-in-out infinite;
+}
+
+.app-3d-shape-one {
+  width: 12rem;
+  height: 12rem;
+  top: 8rem;
+  right: max(2rem, 8vw);
+  border-radius: 1.5rem;
+  transform: rotateX(58deg) rotateZ(26deg) translateZ(-40px);
+}
+
+.app-3d-shape-two {
+  width: 8rem;
+  height: 8rem;
+  left: max(1rem, 6vw);
+  top: 28rem;
+  border-radius: 9999px;
+  animation-delay: -4s;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.86), rgba(191, 219, 254, 0.38));
+  transform: rotateX(64deg) rotateZ(-18deg) translateZ(-70px);
+}
+
+.app-3d-shape-three {
+  width: 9rem;
+  height: 9rem;
+  right: max(1.5rem, 14vw);
+  bottom: 7rem;
+  border-radius: 1.25rem;
+  animation-delay: -7s;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(187, 247, 208, 0.34));
+  transform: rotateX(54deg) rotateZ(-34deg) translateZ(-55px);
+}
+
+.app-3d-content {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: content-float-3d 9s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes layout-float-3d {
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -18px;
+  }
+}
+
+@keyframes content-float-3d {
+  0%, 100% {
+    transform: translateZ(0) rotateX(0.001deg);
+  }
+  50% {
+    transform: translateY(-4px) translateZ(12px) rotateX(0.001deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-3d-shape {
+    opacity: 0.55;
+    scale: 0.72;
+  }
+
+  .app-3d-content {
+    animation-duration: 12s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-3d-shape,
+  .app-3d-content {
+    animation: none;
+  }
+}
+
 /* Emergency button pulse animation */
 @keyframes emergency-pulse {
   0%, 100% {
