@@ -28,6 +28,24 @@ const emergencyTypes = [
   { value: 'Other', label: 'Other', icon: '⚠️' },
 ];
 
+const getOfflineChatResponse = (message) => {
+  const text = message.toLowerCase();
+
+  if (text.includes('cpr') || text.includes('breathing')) {
+    return 'Offline CPR guidance:\n1. Call 112/102/108 as soon as signal is available.\n2. Place hands in the center of the chest.\n3. Push hard and fast, about 100-120 compressions per minute.\n4. Continue until help arrives or the person responds.';
+  }
+
+  if (text.includes('bleed') || text.includes('blood')) {
+    return 'Offline bleeding guidance:\n1. Apply firm direct pressure with clean cloth.\n2. Keep pressure on the wound.\n3. Add more cloth if blood soaks through.\n4. Seek emergency help as soon as possible.';
+  }
+
+  if (text.includes('burn')) {
+    return 'Offline burn guidance:\n1. Cool the burn under cool running water for 10-20 minutes.\n2. Remove tight items near the burn.\n3. Cover loosely with a clean dressing.\n4. Do not use ice, butter, or ointments.';
+  }
+
+  return 'Offline guidance:\n1. Stay calm and check for immediate danger.\n2. Move to safety if needed.\n3. Use 112, 102/108, 100, or 101 as soon as signal is available.\n4. Keep monitoring breathing and consciousness.';
+};
+
 export default function Emergency() {
   const { 
     activeEmergency, 
@@ -38,6 +56,9 @@ export default function Emergency() {
     requestLocation,
     nearbyHospitals, 
     firstAidSteps,
+    queuedEmergencyCount,
+    isOnline,
+    syncQueuedEmergencies,
     triggerEmergency, 
     cancelEmergency,
     resolveEmergency 
@@ -77,8 +98,12 @@ export default function Emergency() {
 
     setIsTriggering(true);
     try {
-      await triggerEmergency(selectedType, description);
-      toast.success('Emergency alert sent! Help is on the way.');
+      const result = await triggerEmergency(selectedType, description);
+      if (result.queued) {
+        toast.success('No network. Emergency saved and will send automatically when online.');
+      } else {
+        toast.success('Emergency alert sent! Help is on the way.');
+      }
       setCurrentStep(0);
       setCompletedSteps(new Set());
     } catch (error) {
@@ -177,7 +202,7 @@ export default function Emergency() {
         ...nextMessages,
         {
           role: 'assistant',
-          text: error.response?.data?.message || 'I could not reach first aid chat. Call 112 if this is urgent.'
+          text: error.response?.data?.message || getOfflineChatResponse(message)
         }
       ]);
     } finally {
@@ -440,6 +465,30 @@ export default function Emergency() {
           <p className="text-gray-600 mt-2">Select emergency type and trigger alert</p>
         </motion.div>
 
+        <div className={`mb-6 rounded-lg border px-4 py-3 text-sm ${
+          isOnline
+            ? 'border-green-200 bg-green-50 text-green-800'
+            : 'border-yellow-200 bg-yellow-50 text-yellow-800'
+        }`}>
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <span>
+              {isOnline
+                ? 'Online - emergency alerts can be sent now.'
+                : 'Offline - emergency alerts will be saved on this device and retried when signal returns.'}
+              {queuedEmergencyCount > 0 && ` ${queuedEmergencyCount} queued alert${queuedEmergencyCount === 1 ? '' : 's'} pending.`}
+            </span>
+            {queuedEmergencyCount > 0 && isOnline && (
+              <button
+                type="button"
+                onClick={syncQueuedEmergencies}
+                className="rounded-lg bg-gray-900 px-3 py-2 text-xs font-medium text-white hover:bg-gray-800"
+              >
+                Send queued now
+              </button>
+            )}
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 gap-6">
           {/* Left: Emergency Type & Description */}
           <motion.div 
@@ -557,7 +606,9 @@ export default function Emergency() {
             <div className="text-center mb-6">
               <h2 className="text-lg font-bold text-gray-900">Ready to Alert</h2>
               <p className="text-sm text-gray-500 mt-1">
-                This will notify all your emergency contacts
+                {isOnline
+                  ? 'This will notify all your emergency contacts'
+                  : 'This will save locally and send when signal returns'}
               </p>
             </div>
 

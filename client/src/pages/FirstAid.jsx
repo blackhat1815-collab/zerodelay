@@ -12,6 +12,69 @@ const conditions = [
   { id: 'stroke', name: 'Stroke', icon: '🧠', color: 'purple' },
 ];
 
+const offlineGuides = {
+  'heart-attack': {
+    title: 'Heart Attack First Aid',
+    steps: [
+      { step: 1, instruction: 'Call emergency services immediately', critical: true },
+      { step: 2, instruction: 'Have the person sit down and rest' },
+      { step: 3, instruction: 'Loosen tight clothing and keep them calm' },
+      { step: 4, instruction: 'Monitor breathing and be ready for CPR' }
+    ],
+    warnings: ['Do not leave the person alone', 'Do not give food or drink if unconscious']
+  },
+  choking: {
+    title: 'Choking First Aid',
+    steps: [
+      { step: 1, instruction: 'Ask if they are choking. Encourage coughing if they can breathe' },
+      { step: 2, instruction: 'If they cannot breathe or speak, stand behind them', critical: true },
+      { step: 3, instruction: 'Give abdominal thrusts above the navel' },
+      { step: 4, instruction: 'Call emergency services if it does not clear quickly' }
+    ],
+    warnings: ['For infants, use back blows and chest thrusts instead']
+  },
+  bleeding: {
+    title: 'Severe Bleeding First Aid',
+    steps: [
+      { step: 1, instruction: 'Apply firm direct pressure with clean cloth', critical: true },
+      { step: 2, instruction: 'Keep pressure. Add cloth if blood soaks through' },
+      { step: 3, instruction: 'Elevate the injured area if possible' },
+      { step: 4, instruction: 'Call emergency services for heavy bleeding' }
+    ],
+    warnings: ['Do not remove embedded objects']
+  },
+  burns: {
+    title: 'Burns First Aid',
+    steps: [
+      { step: 1, instruction: 'Cool the burn under cool running water for 10-20 minutes', critical: true },
+      { step: 2, instruction: 'Remove jewelry or tight items near the burn' },
+      { step: 3, instruction: 'Cover loosely with a clean non-stick dressing' },
+      { step: 4, instruction: 'Seek help for large, deep, chemical, or electrical burns' }
+    ],
+    warnings: ['Do not use ice, butter, or ointments']
+  },
+  fracture: {
+    title: 'Fracture First Aid',
+    steps: [
+      { step: 1, instruction: 'Keep the injured area still', critical: true },
+      { step: 2, instruction: 'Do not try to straighten the bone' },
+      { step: 3, instruction: 'Apply a cold pack wrapped in cloth' },
+      { step: 4, instruction: 'Call emergency services for severe pain or deformity' }
+    ],
+    warnings: ['Do not move the person unless there is immediate danger']
+  },
+  stroke: {
+    title: 'Stroke First Aid',
+    steps: [
+      { step: 1, instruction: 'Check Face, Arms, Speech, Time', critical: true },
+      { step: 2, instruction: 'Call emergency services immediately if signs appear' },
+      { step: 3, instruction: 'Note when symptoms started' },
+      { step: 4, instruction: 'Do not give food or drink' }
+    ],
+    warnings: ['Every minute counts. Do not wait for symptoms to improve']
+  }
+};
+
 export default function FirstAid() {
   const { id, condition } = useParams();
   const selectedCondition = condition || id;
@@ -33,7 +96,13 @@ export default function FirstAid() {
       setGuide(response.data.data);
     } catch (error) {
       console.error('Failed to fetch guide:', error);
-      setError(error.response?.data?.message || 'Unable to load this first aid guide');
+      const offlineGuide = offlineGuides[conditionId];
+      if (offlineGuide) {
+        setGuide(offlineGuide);
+        setError('');
+      } else {
+        setError(error.response?.data?.message || 'Unable to load this first aid guide');
+      }
     } finally {
       setLoading(false);
     }
