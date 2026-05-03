@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import api from '../services/api';
 
@@ -77,26 +77,52 @@ const offlineGuides = {
 
 export default function FirstAid() {
   const { id, condition } = useParams();
-  const selectedCondition = condition || id;
+  const routeCondition = condition || id || '';
+  const navigate = useNavigate();
+  const [selectedCondition, setSelectedCondition] = useState(routeCondition);
   const [guide, setGuide] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (selectedCondition) {
-      fetchGuide(selectedCondition);
+    setSelectedCondition(routeCondition);
+    setGuide(null);
+    setError('');
+
+    if (routeCondition) {
+      fetchGuide(routeCondition);
     }
-  }, [selectedCondition]);
+  }, [routeCondition]);
+
+  const openGuide = (conditionId) => {
+    setSelectedCondition(conditionId);
+    setGuide(offlineGuides[conditionId] || null);
+    setError('');
+    navigate(`/first-aid/${conditionId}`);
+    fetchGuide(conditionId);
+  };
+
+  const showAllGuides = () => {
+    setSelectedCondition('');
+    setGuide(null);
+    setError('');
+    navigate('/first-aid');
+  };
 
   const fetchGuide = async (conditionId) => {
     setLoading(true);
     setError('');
+    const offlineGuide = offlineGuides[conditionId];
+
+    if (offlineGuide) {
+      setGuide(offlineGuide);
+    }
+
     try {
       const response = await api.get(`/first-aid/${conditionId}`);
       setGuide(response.data.data);
     } catch (error) {
       console.error('Failed to fetch guide:', error);
-      const offlineGuide = offlineGuides[conditionId];
       if (offlineGuide) {
         setGuide(offlineGuide);
         setError('');
@@ -125,9 +151,13 @@ export default function FirstAid() {
     return (
       <div className="min-h-screen bg-gray-50 py-8">
         <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <Link to="/first-aid" className="mb-6 inline-flex items-center gap-1 text-emergency-600 hover:text-emergency-700">
+          <button
+            type="button"
+            onClick={showAllGuides}
+            className="mb-6 inline-flex items-center gap-1 text-emergency-600 hover:text-emergency-700"
+          >
             Back to all guides
-          </Link>
+          </button>
           <div className="card p-8">
             <h1 className="text-2xl font-bold text-gray-900">Guide unavailable</h1>
             <p className="mt-2 text-gray-600">{error}</p>
@@ -244,14 +274,15 @@ export default function FirstAid() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Link
-                to={`/first-aid/${item.id}`}
-                className="card p-6 hover:shadow-xl transition-shadow block"
+              <button
+                type="button"
+                onClick={() => openGuide(item.id)}
+                className="card block w-full p-6 text-left transition-shadow hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emergency-500 focus:ring-offset-2"
               >
                 <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900">{item.name}</h3>
                 <p className="text-gray-500 mt-1">View first aid steps →</p>
-              </Link>
+              </button>
             </motion.div>
           ))}
         </div>
